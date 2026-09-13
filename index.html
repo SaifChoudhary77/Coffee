@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Coffee & Shakes • Solutions</title>
+    <!-- Tailwind + Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+   <head>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=FONT_NAME:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "coffee-beige": "#D4A574",
+              "coffee-beige-light": "#E5D0B8",
+              "coffee-beige-dark": "#C4A88F",
+              "coffee-dark": "#1A1A1A",
+              "coffee-charcoal": "#2D2D2D",
+              "coffee-gold": "#C9A96E",
+              "shake-card": "#C9AE96",
+              "shake-btn": "#8B7355",
+              "shake-btn-hover": "#6B5A45",
+              "cream": '#f5f0e8',
+              "creamDark": '#ebe5d9',
+              "brown": '#3d2b1f',
+              "brownLight": '#5c4033',
+              "accent": '#8b5e3c',
+              "text": '#2d1f16',
+              "muted": '#6b5b4f',
+              "border": '#d4c8b8',
+              "card": '#faf7f2',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./style/style.css">
+    <base target="_blank" />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="w-full bg-coffee-beige-light py-4 px-6 lg:px-16 relative z-20">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="relative">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <ellipse
+                cx="20"
+                cy="28"
+                rx="14"
+                ry="4"
+                fill="#1A1A1A"
+                opacity="0.2"
+              />
+              <path
+                d="M10 15C10 10 14 6 20 6C26 6 30 10 30 15V25C30 28 26 30 20 30C14 30 10 28 10 25V15Z"
+                fill="#1A1A1A"
+              />
+              <path
+                d="M12 15C12 11 15 8 20 8C25 8 28 11 28 15V24C28 26 25 28 20 28C15 28 12 26 12 24V15Z"
+                fill="#2D2D2D"
+              />
+              <ellipse cx="20" cy="15" rx="7" ry="3" fill="#4A3728" />
+              <path
+                d="M30 16C33 16 35 18 35 21C35 24 33 26 30 26"
+                stroke="#1A1A1A"
+                stroke-width="2.5"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M14 6C14 4 16 2 20 2C24 2 26 4 26 6"
+                stroke="#1A1A1A"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M17 3C17 2 18 1 20 1C22 1 23 2 23 3"
+                stroke="#1A1A1A"
+                stroke-width="1"
+                fill="none"
+                stroke-linecap="round"
+                opacity="0.6"
+              />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-coffee-dark text-lg font-semibold leading-tight"
+              >Coffee</span
+            >
+            <span class="text-coffee-dark text-xs tracking-wider"
+              >Solutions</span
+            >
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="nav-link text-coffee-dark text-sm font-medium"
+            >Home</a
+          >
+          <a href="#" class="nav-link text-coffee-dark text-sm font-medium"
+            >Menu</a
+          >
+          <a href="#" class="nav-link text-coffee-dark text-sm font-medium"
+            >Blog</a
+          >
+          <a href="#" class="nav-link text-coffee-dark text-sm font-medium"
+            >Media</a
+          >
+          <a href="#" class="nav-link text-coffee-dark text-sm font-medium"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-coffee-dark/5 transition-colors"
+        >
+          <i class="fas fa-search text-coffee-dark text-sm"></i>
+        </button>
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden w-10 h-10 flex items-center justify-center"
+        >
+          <i class="fas fa-bars text-coffee-dark"></i>
+        </button>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden mt-4 pb-4 border-t border-coffee-dark/10 pt-4"
+      >
+        <div class="flex flex-col gap-3">
+          <a href="#" class="text-coffee-dark text-sm font-medium py-2">Home</a>
+          <a href="#" class="text-coffee-dark text-sm font-medium py-2">Menu</a>
+          <a href="#" class="text-coffee-dark text-sm font-medium py-2">Blog</a>
+          <a href="#" class="text-coffee-dark text-sm font-medium py-2"
+            >Media</a
+          >
+          <a href="#" class="text-coffee-dark text-sm font-medium py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="relative w-full mt-20" id="hero">
+
+       <img
+        src="./images/beans-1.jpg"
+        class="hero-corner-img corner-left"
+        alt="Decorative healthy food"
+      />
+
+      <img
+        src="./images/beans-11.png"
+        class="hero-corner-img middle-img"
+        alt="Decorative pizza"
+      />
+
+      <img
+        src="./images/beans-6.png"
+        class="hero-corner-img corner-right"
+        alt="Decorative pizza"
+      />
+
+       <img
+        src="./images/beans-7.webp"
+        class="hero-corner-img corner-right-bottom"
+        alt="Decorative pizza"
+      />
+
+
+      <div
+        class="absolute top-0 left-0 w-full overflow-hidden leading-none z-10"
+        style="transform: translateY(-99%)"
+      >
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          class="w-full h-16 md:h-24 lg:h-32"
+        >
+          <path
+            d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z"
+            fill="#1A1A1A"
+          />
+        </svg>
+      </div>
+      <div class="relative bg-coffee-dark overflow-hidden">
+        <div
+          class="absolute inset-0 opacity-10"
+          style="
+            background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+          "
+        ></div>
+        <div
+          class="max-w-7xl mx-auto px-6 lg:px-16 py-12 md:py-24 lg:py-12 relative z-10"
+        >
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-12"
+          >
+            <div class="flex-1 text-center lg:text-left">
+              <p
+                class="hero-text-1 text-white/70 text-lg md:text-xl font-light tracking-widest uppercase mb-2"
+              >
+                Freshly Roasted
+              </p>
+              <h1
+                class="hero-text-2 text-coffee-beige text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide mb-8"
+              >
+                COFFEE
+              </h1>
+              <a
+                href="#categories"
+                class="hero-btn-anim inline-block bg-white text-coffee-dark px-8 py-3 rounded-full text-sm font-medium shop-btn"
+                >Shop now</a
+              >
+            </div>
+            <div class="flex-1 relative hero-image-anim">
+              <div
+                class="absolute -top-8 -left-8 w-6 h-6 rounded-full bg-amber-800/60 float-bean"
+                style="clip-path: ellipse(45% 48% at 50% 50%)"
+              ></div>
+              <div
+                class="absolute -top-8 -right-4 w-4 h-5 rounded-full bg-amber-700/50 float-bean float-bean-delay-1"
+                style="
+                  clip-path: ellipse(45% 48% at 50% 50%);
+                  transform: rotate(30deg);
+                "
+              ></div>
+              <div
+                class="absolute bottom-12 -left-12 w-5 h-6 rounded-full bg-amber-800/40 float-bean float-bean-delay-2"
+                style="
+                  clip-path: ellipse(45% 48% at 50% 50%);
+                  transform: rotate(-20deg);
+                "
+              ></div>
+              <div
+                class="absolute -bottom-4 right-1 w-4 h-5 rounded-full bg-amber-700/50 float-bean float-bean-delay-3"
+                style="
+                  clip-path: ellipse(45% 48% at 50% 50%);
+                  transform: rotate(45deg);
+                "
+              ></div>
+              <div class="relative w-full max-w-lg mx-auto">
+                <img
+                  src="./images/coffee-6.jpg"
+                  alt="Fresh coffee"
+                  class="w-full h-auto rounded-2xl shadow-2xl parallax-img"
+                  style="filter: brightness(1.1) contrast(1.05)"
+                />
+                <div
+                  class="absolute bottom-1/4 right-12 -translate-x-1/2 w-20 h-20 pointer-events-none"
+                >
+                  <div class="steam-particle"></div>
+                  <div class="steam-particle"></div>
+                  <div class="steam-particle"></div>
+                </div>
+                <div
+                  class="absolute bottom-1/3 right-14 -translate-x-1/2 w-20 h-20 pointer-events-none"
+                >
+                  <div class="steam-particle"></div>
+                  <div class="steam-particle"></div>
+                  <div class="steam-particle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10"
+        style="transform: translateY(99%) rotate(180deg)"
+      >
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          class="w-full h-16 md:h-24 lg:h-32"
+        >
+          <path
+            d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z"
+            fill="#1A1A1A"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ========== TOP CATEGORIES ========== -->
+    <section
+      id="categories"
+      class="w-full bg-coffee-beige-light py-20 md:py-28 lg:py-36 px-6 lg:px-16"
+    >
+
+    <img
+        src="./images/beans-8.png"
+        class="hero-corner-img corner-left-cat"
+        alt="Decorative healthy food"
+      />
+
+      <img
+        src="./images/beans-10.png"
+        class="hero-corner-img corner-right-cat"
+        alt="Decorative pizza"
+      />
+
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 md:mb-16 reveal">
+          <h2
+            class="text-coffee-dark text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide uppercase mb-3"
+          >
+            Top Categories
+          </h2>
+          <p class="text-coffee-dark/60 text-sm md:text-base">
+            Explore The Recent Most Bought Drinks This Week
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <!-- 1 -->
+          <div
+            class="category-card relative rounded-3xl overflow-hidden cursor-pointer reveal"
+            style="aspect-ratio: 3/4"
+          >
+            <img
+              src="./images/mocha.jpg"
+              alt="Coffee Mocha"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"
+            ></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <h3 class="text-white text-xl md:text-2xl font-semibold mb-2">
+                Coffee Mocha
+              </h3>
+              <a
+                href="#"
+                class="view-more text-white/70 text-sm hover:text-white inline-flex items-center gap-2"
+                >View More
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M6 3L11 8L6 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></a>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div
+            class="category-card relative rounded-3xl overflow-hidden cursor-pointer reveal"
+            style="aspect-ratio: 3/4; transition-delay: 0.15s"
+          >
+            <img
+              src="./images/expresso.jpg"
+              alt="Expresso Americano"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"
+            ></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <h3 class="text-white text-xl md:text-2xl font-semibold mb-2">
+                Expresso Americano
+              </h3>
+              <a
+                href="#"
+                class="view-more text-white/70 text-sm hover:text-white inline-flex items-center gap-2"
+                >View More
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M6 3L11 8L6 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></a>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div
+            class="category-card relative rounded-3xl overflow-hidden cursor-pointer reveal"
+            style="aspect-ratio: 3/4; transition-delay: 0.3s"
+          >
+            <img
+              src="./images/capuccino.jpg"
+              alt="Cappuccino"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"
+            ></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <h3 class="text-white text-xl md:text-2xl font-semibold mb-2">
+                Cappuccino
+              </h3>
+              <a
+                href="#"
+                class="view-more text-white/70 text-sm hover:text-white inline-flex items-center gap-2"
+                >View More
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M6 3L11 8L6 13"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our services -->
+      <section style="padding: 60px 0 50px;">
+        <div class="max-w-6xl mx-auto px-5 lg:px-10">
+
+            <!-- Section Header -->
+            <div class="section-title reveal">
+                <h2>Our Service</h2>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </div>
+
+            <!-- Slider -->
+            <div class="slider-wrap" id="serviceSlider">
+                <div class="slider-track" id="sliderTrack">
+
+                    <!-- Card 1 -->
+                    <div class="service-card reveal" data-index="0">
+                        <div>
+                            <div class="card-img-wrap">
+                                <img src="./images/coffee-1.jpg" 
+                                     alt="Latte Art" class="card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-meta">
+                                    <span class="card-number">01</span>
+                                    <div class="card-icons">
+                                        <i class="fas fa-heart card-icon" onclick="toggleHeart(this)"></i>
+                                        <i class="fas fa-star card-icon"></i>
+                                        <i class="fas fa-share-alt card-icon"></i>
+                                    </div>
+                                </div>
+                                <h3 class="card-title">Best Coffee Flavour</h3>
+                                <div class="card-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-count">50</span>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="card-price">$150</span>
+                                    <button class="see-more-btn" onclick="seeMore(this)">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="service-card reveal" data-index="1" style="transition-delay: 0.1s;">
+                        <div>
+                            <div class="card-img-wrap">
+                                <img src="https://kimi-web-img.kimi.ai/img/cdn.babyseo.ai/afb76d158ce8a7402a9c9dfde0ed8d9e5bf4c69f.webp" 
+                                     alt="Barista Pouring" class="card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-meta">
+                                    <span class="card-number">02</span>
+                                    <div class="card-icons">
+                                        <i class="fas fa-heart card-icon" onclick="toggleHeart(this)"></i>
+                                        <i class="fas fa-star card-icon"></i>
+                                        <i class="fas fa-share-alt card-icon"></i>
+                                    </div>
+                                </div>
+                                <h3 class="card-title">Best Coffee Flavour</h3>
+                                <div class="card-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-count">50</span>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="card-price">$150</span>
+                                    <button class="see-more-btn" onclick="seeMore(this)">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="service-card reveal" data-index="2" style="transition-delay: 0.2s;">
+                        <div>
+                            <div class="card-img-wrap">
+                                <img src="https://kimi-web-img.kimi.ai/img/coffee-sensor.com/59d3c3a245ae3871a575b1d7bfca065721d25639.jpg" 
+                                     alt="Espresso Machine" class="card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-meta">
+                                    <span class="card-number">03</span>
+                                    <div class="card-icons">
+                                        <i class="fas fa-heart card-icon" onclick="toggleHeart(this)"></i>
+                                        <i class="fas fa-star card-icon"></i>
+                                        <i class="fas fa-share-alt card-icon"></i>
+                                    </div>
+                                </div>
+                                <h3 class="card-title">Best Coffee Flavour</h3>
+                                <div class="card-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-count">50</span>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="card-price">$150</span>
+                                    <button class="see-more-btn" onclick="seeMore(this)">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="service-card reveal" data-index="3" style="transition-delay: 0.3s;">
+                        <div>
+                            <div class="card-img-wrap">
+                                <img src="./images/coffee-2.jpg" 
+                                     alt="Pour Over" class="card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-meta">
+                                    <span class="card-number">04</span>
+                                    <div class="card-icons">
+                                        <i class="fas fa-heart card-icon" onclick="toggleHeart(this)"></i>
+                                        <i class="fas fa-star card-icon"></i>
+                                        <i class="fas fa-share-alt card-icon"></i>
+                                    </div>
+                                </div>
+                                <h3 class="card-title">Best Coffee Flavour</h3>
+                                <div class="card-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-count">50</span>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="card-price">$150</span>
+                                    <button class="see-more-btn" onclick="seeMore(this)">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="service-card reveal" data-index="4" style="transition-delay: 0.4s;">
+                        <div>
+                            <div class="card-img-wrap">
+                                <img src="./images/coffee-3.jpg" 
+                                     alt="Coffee Roasting" class="card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-meta">
+                                    <span class="card-number">05</span>
+                                    <div class="card-icons">
+                                        <i class="fas fa-heart card-icon" onclick="toggleHeart(this)"></i>
+                                        <i class="fas fa-star card-icon"></i>
+                                        <i class="fas fa-share-alt card-icon"></i>
+                                    </div>
+                                </div>
+                                <h3 class="card-title">Best Coffee Flavour</h3>
+                                <div class="card-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-count">50</span>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="card-price">$150</span>
+                                    <button class="see-more-btn" onclick="seeMore(this)">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="service-card reveal" data-index="5" style="transition-delay: 0.5s;">
+                        <div>
+                            <div class="card-img-wrap">
+                                <img src="./images/coffee-4.jpg" 
+                                     alt="Latte Art Class" class="card-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-meta">
+                                    <span class="card-number">06</span>
+                                    <div class="card-icons">
+                                        <i class="fas fa-heart card-icon" onclick="toggleHeart(this)"></i>
+                                        <i class="fas fa-star card-icon"></i>
+                                        <i class="fas fa-share-alt card-icon"></i>
+                                    </div>
+                                </div>
+                                <h3 class="card-title">Best Coffee Flavour</h3>
+                                <div class="card-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-count">50</span>
+                                </div>
+                                <div class="card-bottom">
+                                    <span class="card-price">$150</span>
+                                    <button class="see-more-btn" onclick="seeMore(this)">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Desktop Controls -->
+            <div class="hidden md:flex justify-between items-center">
+                <!-- Nav Arrows -->
+                <div class="nav-arrows">
+                    <button class="nav-arrow" id="prevBtn" onclick="goToSlide(currentSlide - 1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-arrow" id="nextBtn" onclick="goToSlide(currentSlide + 1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Pagination Dots -->
+                <div class="pagination-wrap" id="paginationDots">
+                    <button class="pagination-dot active" data-index="0" onclick="goToSlide(0)"></button>
+                    <button class="pagination-dot" data-index="1" onclick="goToSlide(1)"></button>
+                </div>
+            </div>
+
+            <!-- Mobile Pagination Dots -->
+            <div class="flex justify-center md:hidden" id="mobileDots">
+                <div class="pagination-wrap">
+                    <button class="pagination-dot active" data-index="0" onclick="snapToCard(0)"></button>
+                    <button class="pagination-dot" data-index="1" onclick="snapToCard(1)"></button>
+                    <button class="pagination-dot" data-index="2" onclick="snapToCard(2)"></button>
+                    <button class="pagination-dot" data-index="3" onclick="snapToCard(3)"></button>
+                    <button class="pagination-dot" data-index="4" onclick="snapToCard(4)"></button>
+                    <button class="pagination-dot" data-index="5" onclick="snapToCard(5)"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== TOP MILK SHAKES ========== -->
+    <section style="padding: 48px 0 40px">
+      <div class="section-header text-center mb-12 reveal">
+        <h2
+          class="text-coffee-dark text-2xl md:text-3xl font-bold tracking-wide uppercase mb-2"
+        >
+          Top Milk Shakes
+        </h2>
+        <p class="text-coffee-dark/55 text-sm">
+          Explore The Recent Most Bought Shakes This Week
+        </p>
+      </div>
+
+      <div class="shakes-grid" id="shakeSlider">
+        <!-- 1 -->
+        <div class="shake-card reveal" data-index="0">
+          <div class="shake-card-inner">
+            <button class="like-btn" onclick="toggleLike(this)">
+              <i class="far fa-thumbs-up"></i
+              ><span class="like-count">30 likes</span>
+            </button>
+            <div class="shake-img-wrap">
+              <img
+                src="https://kimi-web-img.kimi.ai/img/static.vecteezy.com/05ee3e1a5024c5568aca2e827177829163a10acd.png"
+                alt="Matcha Shake"
+                class="shake-img float-anim"
+                draggable="false"
+              />
+            </div>
+            <h3 class="card-title">Matcha Shake</h3>
+            <div class="card-bottom">
+              <span class="card-price">$20.00</span
+              ><button class="buy-btn" onclick="buyItem(this)">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div
+          class="shake-card reveal"
+          data-index="1"
+          style="transition-delay: 0.1s"
+        >
+          <div class="shake-card-inner">
+            <button class="like-btn" onclick="toggleLike(this)">
+              <i class="far fa-thumbs-up"></i
+              ><span class="like-count">30 likes</span>
+            </button>
+            <div class="shake-img-wrap">
+              <img
+                src="https://kimi-web-img.kimi.ai/img/static.vecteezy.com/6dde3e6469f9172f43dc178412837e764562791d.png"
+                alt="Lavender Shake"
+                class="shake-img float-anim float-d1"
+                draggable="false"
+              />
+            </div>
+            <h3 class="card-title">Lavender Shake</h3>
+            <div class="card-bottom">
+              <span class="card-price">$20.00</span
+              ><button class="buy-btn" onclick="buyItem(this)">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div
+          class="shake-card reveal"
+          data-index="2"
+          style="transition-delay: 0.2s"
+        >
+          <div class="shake-card-inner">
+            <button class="like-btn" onclick="toggleLike(this)">
+              <i class="far fa-thumbs-up"></i
+              ><span class="like-count">30 likes</span>
+            </button>
+            <div class="shake-img-wrap">
+              <img
+                src="https://kimi-web-img.kimi.ai/img/static.vecteezy.com/0299f4368bba5544497ffaab08ab488dadd59a28.png"
+                alt="Caramel Shake"
+                class="shake-img float-anim float-d2"
+                draggable="false"
+              />
+            </div>
+            <h3 class="card-title">Caramel Shake</h3>
+            <div class="card-bottom">
+              <span class="card-price">$20.00</span
+              ><button class="buy-btn" onclick="buyItem(this)">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div
+          class="shake-card reveal"
+          data-index="3"
+          style="transition-delay: 0.3s"
+        >
+          <div class="shake-card-inner">
+            <button class="like-btn" onclick="toggleLike(this)">
+              <i class="far fa-thumbs-up"></i
+              ><span class="like-count">30 likes</span>
+            </button>
+            <div class="shake-img-wrap">
+              <img
+                src="https://kimi-web-img.kimi.ai/img/static.vecteezy.com/6ea5116778a785e3e067ecf56a0871d7e491bf4e.png"
+                alt="Strawberry Shake"
+                class="shake-img float-anim float-d3"
+                draggable="false"
+              />
+            </div>
+            <h3 class="card-title">Strawberry Shake</h3>
+            <div class="card-bottom">
+              <span class="card-price">$20.00</span
+              ><button class="buy-btn" onclick="buyItem(this)">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div
+          class="shake-card reveal"
+          data-index="4"
+          style="transition-delay: 0.4s"
+        >
+          <div class="shake-card-inner">
+            <button class="like-btn" onclick="toggleLike(this)">
+              <i class="far fa-thumbs-up"></i
+              ><span class="like-count">30 likes</span>
+            </button>
+            <div class="shake-img-wrap">
+              <img
+                src="https://kimi-web-img.kimi.ai/img/static.vecteezy.com/a95352ef85bd6637ad60a533bb69e5ab7bb81955.png"
+                alt="Blueberry Shake"
+                class="shake-img float-anim float-d4"
+                draggable="false"
+              />
+            </div>
+            <h3 class="card-title">Blueberry Shake</h3>
+            <div class="card-bottom">
+              <span class="card-price">$20.00</span
+              ><button class="buy-btn" onclick="buyItem(this)">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div
+          class="shake-card reveal"
+          data-index="5"
+          style="transition-delay: 0.5s"
+        >
+          <div class="shake-card-inner">
+            <button class="like-btn" onclick="toggleLike(this)">
+              <i class="far fa-thumbs-up"></i
+              ><span class="like-count">30 likes</span>
+            </button>
+            <div class="shake-img-wrap">
+              <img
+               src="https://kimi-web-img.kimi.ai/img/static.vecteezy.com/05ee3e1a5024c5568aca2e827177829163a10acd.png"
+                alt="Vanilla Shake"
+                class="shake-img float-anim float-d5"
+                draggable="false"
+              />
+            </div>
+            <h3 class="card-title">Vanilla Shake</h3>
+            <div class="card-bottom">
+              <span class="card-price">$20.00</span
+              ><button class="buy-btn" onclick="buyItem(this)">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination-wrap" id="paginationDots">
+        <button
+          class="pagination-dot active"
+          data-index="0"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="pagination-dot"
+          data-index="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          class="pagination-dot"
+          data-index="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          class="pagination-dot"
+          data-index="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          class="pagination-dot"
+          data-index="4"
+          aria-label="Slide 5"
+        ></button>
+        <button
+          class="pagination-dot"
+          data-index="5"
+          aria-label="Slide 6"
+        ></button>
+      </div>
+    </section>
+
+        
+<!-- ==================== OUR SPECIAL COFFEE ==================== -->
+<section class="py-16 lg:py-24 bg-cafe-cream">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-2xl sm:text-3xl font-bold text-cafe-text mb-10 lg:mb-14 tracking-wide reveal">OUR SPECIAL COFFEE</h2>
+
+        <div class="relative">
+            <!-- Left Arrow -->
+            <button onclick="scrollCarousel('coffee', -1)" class="nav-arrow absolute left-0 top-1/2 z-10 w-10 h-10 rounded-full border border-cafe-border bg-white/80 flex items-center justify-center text-cafe-muted hover:text-white shadow-sm">
+                <i class="fas fa-chevron-left text-sm"></i>
+            </button>
+
+            <!-- Carousel -->
+            <div id="coffeeCarousel" class="carousel-track flex gap-5 overflow-x-auto snap-x snap-mandatory px-2 pb-4">
+
+                <!-- Card 1: Lungo Coffee -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/lungo.jpg" alt="Lungo Coffee in glass cup" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4 card-body">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Lungo Coffee</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Rich and aromatic long espresso with a smooth finish, perfect for slow sipping.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 199</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Dalgona Coffee -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/dalgona.jpg" alt="Dalgona whipped coffee" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Dalgona Coffee</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Whipped coffee topping over chilled milk, creamy and indulgent.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 159</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Iced Coffee -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/iced-coffee.jpg" alt="Iced Coffee in tall glass" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Iced Coffee</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Refreshing cold brew with ice cubes, perfect for hot summer days.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 149</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Filter Coffee -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/filter-coffee.jpg" alt="South Indian Filter Coffee" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Filter Coffee</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Traditional South Indian filter coffee with rich aroma and bold flavor.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 99</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Right Arrow -->
+            <button onclick="scrollCarousel('coffee', 1)" class="nav-arrow absolute right-0 top-1/2 z-10 w-10 h-10 rounded-full border border-cafe-border bg-white/80 flex items-center justify-center text-cafe-muted hover:text-white shadow-sm">
+                <i class="fas fa-chevron-right text-sm"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== OUR SPECIAL DESSERT ==================== -->
+<section class="py-16 lg:py-24 bg-cafe-cream" id="desert">
+
+  <img
+        src="./images/beans-2.png"
+        class="hero-corner-img corner-left-des"
+        alt="Decorative healthy food"
+      />
+
+      <img
+        src="./images/beans-5.jpg"
+        class="hero-corner-img corner-right-des"
+        alt="Decorative pizza"
+      />
+
+
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-2xl sm:text-3xl font-bold text-cafe-text mb-10 lg:mb-14 tracking-wide reveal">OUR SPECIAL DESSERT</h2>
+
+        <div class="relative">
+            <!-- Left Arrow -->
+            <button onclick="scrollCarousel('dessert', -1)" class="nav-arrow absolute left-0 top-1/2 z-10 w-10 h-10 rounded-full border border-cafe-border bg-white/80 flex items-center justify-center text-cafe-muted hover:text-white shadow-sm">
+                <i class="fas fa-chevron-left text-sm"></i>
+            </button>
+
+            <!-- Carousel -->
+            <div id="dessertCarousel" class="carousel-track flex gap-5 overflow-x-auto snap-x snap-mandatory px-2 pb-4">
+
+                <!-- Card 1: Gulab Jamun -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/gulab-jamun.jpg" alt="Gulab Jamun Indian dessert" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Gulab Jamun</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Soft milk-solid dumplings soaked in fragrant rose sugar syrup.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 199</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Chocolate Tiramisu -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/chocolate-tiramisu.jpg" alt="Chocolate Tiramisu dessert" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Chocolate Tiramisu</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Classic Italian layered dessert with coffee-soaked ladyfingers and cocoa.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 250</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Churros -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/churros.jpg" alt="Churros with chocolate dip" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Churros</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Crispy fried dough sticks dusted with cinnamon sugar, served with chocolate.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 170</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Australian Lamingtons -->
+                <article class="product-card snap-start min-w-[260px] sm:min-w-[280px] flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-cafe-border/40">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="./images/lamingtons.jpg" alt="Australian Lamingtons with coconut" class="card-img w-full h-full object-cover">
+                        <button onclick="toggleWishlist(this)" class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-cafe-border flex items-center justify-center text-cafe-muted text-xs">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-cafe-text text-[15px] mb-1">Australian Lamingtons</h3>
+                        <p class="text-[11px] text-cafe-muted leading-relaxed mb-3 line-clamp-2">Sponge cake cubes coated in chocolate and rolled in desiccated coconut.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-cafe-text text-sm">Rs. 280</span>
+                            <button class="order-btn px-4 py-1.5 bg-cafe-text text-white text-[11px] font-medium rounded-md">Order now</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Right Arrow -->
+            <button onclick="scrollCarousel('dessert', 1)" class="nav-arrow absolute right-0 top-1/2 z-10 w-10 h-10 rounded-full border border-cafe-border bg-white/80 flex items-center justify-center text-cafe-muted hover:text-white shadow-sm">
+                <i class="fas fa-chevron-right text-sm"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== BEST COFFEE BEANS BANNER ==================== -->
+<section class="relative py-8 lg:py-10 bg-cafe-creamDark overflow-hidden" id="beans">
+    <!-- Left Beans Image -->
+    <div class="beans-left absolute left-0 bottom-0 w-[200px] sm:w-[280px] lg:w-[380px] h-auto z-10 float-anim">
+        <img src="./images/beans.jpg" alt="Hand holding roasted coffee beans" class="w-full h-auto object-contain" style="mask-image: linear-gradient(to right, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);">
+    </div>
+
+    <!-- Right Beans Image -->
+    <div class="beans-right absolute right-0 bottom-0 w-[180px] sm:w-[250px] lg:w-[320px] h-auto z-10 float-anim" style="animation-delay: 1s;">
+        <img src="./images/coffee-8.jpg" alt="Scattered roasted coffee beans" class="w-full h-auto object-contain" style="mask-image: linear-gradient(to left, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);">
+    </div>
+
+    <div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center z-20 py-8" id="beans-content">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-cafe-text mb-4 leading-tight reveal">
+            Check out our best<br>coffee beans
+        </h2>
+        <a href="#" class="explore-btn inline-flex items-center gap-2 px-7 py-3 bg-cafe-text text-white text-sm font-medium rounded-full mt-2">
+            Explore our products
+            <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+    </div>
+</section>
+
+
+<!-- ==================== OUR HAPPY CUSTOMERS ==================== -->
+<section class="py-16 lg:py-24 bg-cafe-cream">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-cafe-muted text-sm italic mb-2 reveal">Come and join</p>
+        <h2 class="text-center text-2xl sm:text-3xl font-bold text-cafe-text mb-10 lg:mb-14 tracking-wide reveal">OUR HAPPY CUSTOMERS</h2>
+
+        <div id="testimonialContainer" class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card bg-cafe-cream/10 rounded-2xl p-5 lg:p-6 shadow-sm border border-cafe-border/30 reveal blog-card">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Clara Jadeline customer avatar" class="w-11 h-11 rounded-full object-cover border-2 border-cafe-border/30">
+                    <div>
+                        <h4 class="font-semibold text-cafe-text text-sm">Clara Jadeline</h4>
+                        <p class="text-[11px] text-cafe-muted">Entrepreneur</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5">
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                    </div>
+                </div>
+                <p class="text-[12px] text-cafe-muted leading-relaxed">
+                    I recently tried their coffee and was incredibly impressed. The quality of the beans is outstanding, and the flavor profile is rich and smooth. The customer service was excellent, and delivery was prompt. I will definitely be ordering again and recommending to friends.
+                </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card bg-cafe-cream/10 rounded-2xl p-5 lg:p-6 shadow-sm border border-cafe-border/30 reveal blog-card">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Sam Williams customer avatar" class="w-11 h-11 rounded-full object-cover border-2 border-cafe-border/30">
+                    <div>
+                        <h4 class="font-semibold text-cafe-text text-sm">Sam Williams</h4>
+                        <p class="text-[11px] text-cafe-muted">Entrepreneur</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5">
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                    </div>
+                </div>
+                <p class="text-[12px] text-cafe-muted leading-relaxed">
+                    I have been ordering beans from you for five years. The quality of the product is consistently high, and the gratitude for the coffee I get is immeasurable. In the twenty-first century, most people don't appreciate slow living, but your coffee gives me the best cups of coffee.
+                </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card bg-cafe-cream/10 rounded-2xl p-5 lg:p-6 shadow-sm border border-cafe-border/30 reveal blog-card">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Angela Saunders customer avatar" class="w-11 h-11 rounded-full object-cover border-2 border-cafe-border/30">
+                    <div>
+                        <h4 class="font-semibold text-cafe-text text-sm">Angela Saunders</h4>
+                        <p class="text-[11px] text-cafe-muted">Entrepreneur</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5">
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                        <i class="fas fa-star star-gold text-[10px]"></i>
+                    </div>
+                </div>
+                <p class="text-[12px] text-cafe-muted leading-relaxed">
+                    I love their coffee beans. For over 10 years, the quality of the product is consistently high, and the gratitude for the coffee I get is immeasurable. In the twenty-first century, most people don't appreciate slow living, but your coffee gives me the best cups of coffee.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="flex items-center justify-center gap-2 mt-8">
+            <button class="dot active w-2.5 h-2.5 rounded-full bg-cafe-border"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-cafe-border"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-cafe-border"></button>
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== NEWSLETTER SECTION ==================== -->
+<section class="relative py-16 lg:py-20 bg-cafe-creamDark overflow-hidden" id="news">
+    <!-- Left Corner Beans -->
+    <div class="beans-left absolute left-0 bottom-0 w-[160px] sm:w-[220px] lg:w-[300px] h-auto">
+        <img src="./images/coffee-1.jpg" alt="Coffee beans decoration" class="w-full h-auto object-contain opacity-90" style="mask-image: linear-gradient(to top right, black 40%, transparent 90%); -webkit-mask-image: linear-gradient(to top right, black 40%, transparent 90%);">
+    </div>
+
+    <!-- Right Corner Beans -->
+    <div class="beans-right absolute right-0 bottom-0 w-[160px] sm:w-[220px] lg:w-[300px] h-auto">
+        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop" alt="Coffee beans decoration" class="w-full h-auto object-contain opacity-90" style="mask-image: linear-gradient(to top left, black 40%, transparent 90%); -webkit-mask-image: linear-gradient(to top left, black 40%, transparent 90%);">
+    </div>
+
+    <div class="relative max-w-[600px] mx-auto px-4 sm:px-6 text-center z-10 reveal" id="news-data">
+        <h2 class="text-2xl sm:text-3xl font-bold text-cafe-text mb-3">Join in and get 15% Off!</h2>
+        <p class="text-sm text-cafe-muted mb-8">Subscribe to our newsletter and get 15% off your first order</p>
+
+        <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto">
+            <div class="relative w-full">
+                <i class="far fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-cafe-muted text-sm"></i>
+                <input 
+                    type="email" 
+                    placeholder="Email address" 
+                    required
+                    class="w-full pl-11 pr-4 py-3.5 bg-white border border-cafe-border/50 rounded-full text-sm text-cafe-text placeholder-cafe-muted focus:outline-none focus:border-cafe-accent focus:ring-2 focus:ring-cafe-accent/10 transition-all"
+                >
+            </div>
+            <button type="submit" class="subscribe-btn w-full sm:w-auto px-8 py-3.5 bg-cafe-text text-white text-sm font-medium rounded-full whitespace-nowrap">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- ========== LATEST BLOGS ========== -->
+    <section style="padding: 60px 0 80px" id="blogs">
+
+       <img
+        src="./images/beans-4.png"
+        class="hero-corner-img corner-left-blog"
+        alt="Decorative healthy food"
+      />
+
+      <img
+        src="./images/beans-9.png"
+        class="hero-corner-img corner-right-blog"
+        alt="Decorative pizza"
+      />
+
+
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12 reveal">
+          <h2
+            class="text-coffee-dark text-2xl md:text-3xl font-bold tracking-wide uppercase mb-2"
+          >
+            Latest Blogs
+          </h2>
+          <p class="text-coffee-dark/55 text-sm">
+            Explore The Recent Most Bought Shakes This Week
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div class="blog-card reveal">
+            <div class="blog-img-wrap">
+              <img
+                src="./images/blog-1.jpg"
+                alt="Coffee Connoisseur"
+                class="blog-img"
+              />
+            </div>
+            <div class="p-5 md:p-6">
+              <h3 class="text-coffee-dark text-base font-semibold mb-2">
+                Coffee Connoisseur
+              </h3>
+              <p class="text-coffee-dark/60 text-xs leading-relaxed mb-1">
+                Discover the art of coffee tasting with our expert guide. From
+                bean selection to brewing techniques, we cover everything you
+                need to know.
+              </p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          <div class="blog-card reveal" style="transition-delay: 0.15s">
+            <div class="blog-img-wrap">
+              <img
+                src="https://kimi-web-img.kimi.ai/img/media.gettyimages.com/658b9efdab320692c96ab1fdf9b3b5bba570a96e.jpg"
+                alt="Coffee Connoisseur"
+                class="blog-img"
+              />
+            </div>
+            <div class="p-5 md:p-6">
+              <h3 class="text-coffee-dark text-base font-semibold mb-2">
+                Coffee Connoisseur
+              </h3>
+              <p class="text-coffee-dark/60 text-xs leading-relaxed mb-1">
+                Join our community of coffee lovers and explore the rich flavors
+                of artisanal blends. Perfect for beginners and enthusiasts
+                alike.
+              </p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          <div class="blog-card reveal" style="transition-delay: 0.3s">
+            <div class="blog-img-wrap">
+              <img
+                src="./images/coffee.jpg"
+                alt="Coffee Connoisseur"
+                class="blog-img"
+              />
+            </div>
+            <div class="p-5 md:p-6">
+              <h3 class="text-coffee-dark text-base font-semibold mb-2">
+                Coffee Connoisseur
+              </h3>
+              <p class="text-coffee-dark/60 text-xs leading-relaxed mb-1">
+                Learn the secrets behind the perfect cup. Our baristas share
+                their tips on extraction, milk frothing, and latte art mastery.
+              </p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-wrap">
+      <div class="footer-bg-img"></div>
+      <div class="glow-dot" style="top: -100px; left: -100px"></div>
+      <div class="glow-dot" style="bottom: -100px; right: -100px"></div>
+
+      <div class="corner-img corner-tl">
+        <img
+          src="https://kimi-web-img.kimi.ai/img/thumbs.dreamstime.com/ca3459f9e5b917ca6645012ac792988a0f890e5e.jpg"
+          alt=""
+        />
+      </div>
+      <div class="corner-img corner-tr">
+        <img
+          src="https://kimi-web-img.kimi.ai/img/c8.alamy.com/ed3f3b2c95f86091f5c9bd4d98eabc21dcde59a0.jpg"
+          alt=""
+        />
+      </div>
+      <div class="corner-img corner-bl">
+        <img
+          src="https://kimi-web-img.kimi.ai/img/t4.ftcdn.net/f901ff6bdde0d1f01e6641fbf3f50f49b5f49f1a.jpg"
+          alt=""
+        />
+      </div>
+      <div class="corner-img corner-br">
+        <img
+          src="https://kimi-web-img.kimi.ai/img/t3.ftcdn.net/fc644d0e1bb776c0151321d8a920ac2b0a99329c.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="floating-bean fb-1"></div>
+      <div class="floating-bean fb-2"></div>
+      <div class="floating-bean fb-3"></div>
+      <div class="floating-bean fb-4"></div>
+      <div class="floating-bean fb-5"></div>
+      <div class="floating-bean fb-6"></div>
+
+      <div
+        class="footer-content max-w-6xl mx-auto px-6 lg:px-12 py-16 md:py-20"
+      >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+          <div class="reveal">
+            <h4 class="footer-heading">Products</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="footer-link">Shakes</a></li>
+              <li><a href="#" class="footer-link">Milk</a></li>
+              <li><a href="#" class="footer-link">Weekly HSR</a></li>
+            </ul>
+          </div>
+          <div class="reveal" style="transition-delay: 0.1s">
+            <h4 class="footer-heading">Category</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="footer-link">Milk</a></li>
+              <li><a href="#" class="footer-link">News</a></li>
+              <li><a href="#" class="footer-link">Weekly HSR</a></li>
+            </ul>
+          </div>
+          <div class="reveal" style="transition-delay: 0.2s">
+            <h4 class="footer-heading">Company Info</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="footer-link">About us</a></li>
+              <li><a href="#" class="footer-link">Contact us</a></li>
+              <li><a href="#" class="footer-link">Payment Options</a></li>
+              <li><a href="#" class="footer-link">Free Delivery</a></li>
+              <li><a href="#" class="footer-link">Support</a></li>
+              <li><a href="#" class="footer-link">Visit Here</a></li>
+              <li><a href="#" class="footer-link">Site Credits</a></li>
+            </ul>
+          </div>
+          <div class="reveal" style="transition-delay: 0.3s">
+            <h4 class="footer-heading">Follow us</h4>
+            <div class="flex gap-3 mb-6">
+              <a href="#" class="social-icon" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+            <p class="text-white/30 text-xs leading-relaxed">
+              Stay connected with us for the latest updates, offers, and coffee
+              stories.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-bar max-w-6xl mx-auto px-6 lg:px-12 py-5">
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="#" class="bottom-link">Data settings</a>
+          <a href="#" class="bottom-link">Cookie settings</a>
+          <a href="#" class="bottom-link">Privacy Policy</a>
+          <a href="#" class="bottom-link">Terms and Conditions</a>
+          <a href="#" class="bottom-link">Imprint</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+   <script src="./js/script.js"></script>
+  </body>
+</html>
