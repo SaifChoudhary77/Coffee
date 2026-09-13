@@ -1408,6 +1408,15 @@ h6 {
     bottom: 0px;
     right: 0px;
   }
+
+  #services .service-card{
+    padding: 0px;
+  }
+
+  #services .service-card .card-img-wrap{
+    margin-top: 30px;
+    border-radius: 10px;
+  }
 }
 
 
