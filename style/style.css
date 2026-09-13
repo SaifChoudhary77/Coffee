@@ -1414,7 +1414,7 @@ h6 {
   }
 
   #services .service-card .card-img-wrap{
-    margin-top: 0px;
+    margin: 30px;
     border-radius: 10px;
   }
 }
